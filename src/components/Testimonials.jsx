@@ -46,7 +46,6 @@ const Testimonials = () => {
     });
   }, [currentIndex]);
 
-  // autoplay: arranca y limpia el intervalo
   useEffect(() => {
     // start autoplay
     intervalRef.current = setInterval(() => {

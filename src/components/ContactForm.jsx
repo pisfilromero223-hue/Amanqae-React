@@ -1,5 +1,9 @@
 import { useState } from "react";
-import "./Contact.css"; // si ya tienes tus estilos
+import "./Contact.css";
+
+// Importar Firebase
+import { db } from "../firebase"; // AJUSTA la ruta según tu carpeta
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -13,15 +17,30 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Aquí luego conectamos con backend / BD
-    console.log("Formulario enviado:", form);
+    try {
+      await addDoc(collection(db, "contactos"), {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+        fecha: Timestamp.now(),
+      });
 
-    alert("Consulta enviada correctamente 👌");
+      alert("Consulta enviada correctamente 👌");
 
-    setForm({ name: "", email: "", phone: "", message: "" });
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error al enviar formulario:", error);
+      alert("Hubo un error al enviar tu consulta. Intenta más tarde.");
+    }
   };
 
   return (
