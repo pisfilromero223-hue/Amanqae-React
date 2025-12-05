@@ -1,0 +1,108 @@
+.admin-container {
+  padding: 40px;
+  background: #0e0e0e;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TARJETAS SUPERIORES */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #2d2d2d;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card .green { color: #00e676; }
+.card .red { color: #ff5252; }
+
+/* TABLA */
+.table-container {
+  margin-top: 20px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #2d2d2d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead tr {
+  background: #272727;
+}
+
+thead th {
+  padding: 12px;
+  font-size: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+/* ESTADOS */
+.estado {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+}
+
+.ocupado {
+  background: rgba(255, 82, 82, 0.15);
+  color: #ff5252;
+}
+
+.libre {
+  background: rgba(0, 230, 118, 0.15);
+  color: #00e676;
+}
+
+/* BOTÓN LIBERAR */
+.btn-liberar {
+  background: #ff5252;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.btn-liberar:hover {
+  background: #ff1744;
+}
+
+.guion {
+  opacity: 0.5;
+}

@@ -4,11 +4,13 @@ import ContactForm from "../components/ContactForm";
 import ContactMap from "../components/ContactMap";
 import BookingForm from "../components/BookingForm";
 import Footer from "../components/Footer";
+import Preloader from "../components/Preloader";
 
 function Contacto() {
   return (
 
     <>
+      <Preloader />
       <Header />
 
       <section className="acerca-banner">

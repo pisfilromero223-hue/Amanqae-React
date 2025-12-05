@@ -3,11 +3,15 @@ import Testimonials from "../components/Testimonials";
 import '../assets/css/home.css';
 import BookingForm from '../components/BookingForm';
 import Footer from '../components/Footer';
+import { Link } from "react-router-dom";
+import Preloader from '../components/Preloader';
 
 
 function Home() {
   return (
     <>
+      <Preloader />
+
       <Header />
 
       <section className="hero-banner">
@@ -26,10 +30,10 @@ function Home() {
             </p>
 
             <div className="container-button">
-              <a href="Contacto.html#formulario-reserva" className="btn btn-primary">
+              <Link to="/Contacto" className="btn btn-primary">
                 Reserva una mesa
                 <i className="fa-solid fa-arrow-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -100,13 +104,14 @@ function Home() {
             </ul>
 
             <div className="container-buttons">
-              <a href="Carta.html" className="btn btn-primary">
-                Nuestra Carta <i className="fa-solid fa-arrow-right"></i>
-              </a>
 
-              <a href="Acerca.html" className="btn btn-secundary">
+              <Link to="/Carta" className="btn btn-primary">
+                Nuestra Carta <i className="fa-solid fa-arrow-right"></i>
+              </Link>
+
+              <Link to="/Acerca" className="btn btn-secundary">
                 Conoce más <i className="fa-solid fa-arrow-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -184,7 +189,7 @@ function Home() {
 
             <p className="dish-link">
               ¿Tienes antojo de algo inigualable?
-              <a href="Carta.html">¡ Mira toda nuestra carta !</a>
+              <Link to="/Carta">¡ Mira toda nuestra carta !</Link>
             </p>
 
           </div>
@@ -247,13 +252,13 @@ function Home() {
             </div>
 
             <div className="container-button">
-              <a
-                href="Contacto.html#formulario-reserva"
+              <Link
+                to="/Contacto"
                 className="btn btn-primary"
               >
                 Reserva una mesa
                 <i className="fa-solid fa-arrow-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -275,81 +280,81 @@ function Home() {
 
               {/* 1 */}
               <div className="container-blog">
-                <a href="#" className="container-img">
+                <Link to="/Cultura" className="container-img">
                   <figure>
                     <img
                       src={'/blog-image-1.jpg'}
                       alt="Post 1"
                     />
                   </figure>
-                </a>
+                </Link>
 
                 <div className="blog-info">
                   <h3>
-                    <a href="Cultura.html">
+                    <Link to="/Cultura">
                       Conoce sobre nuestro taller de acurela
-                    </a>
+                    </Link>
                   </h3>
 
                   <div className="container-button">
-                    <a href="Cultura.html" className="btn-read-more">
+                    <Link to="/Cultura" className="btn-read-more">
                       Leer mas
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               {/* 2 */}
               <div className="container-blog">
-                <a href="Cultura.html" className="container-img">
+                <Link to="/Cultura" className="container-img">
                   <figure>
                     <img
                       src={'/blog-image-2.jpg'}
                       alt="Post 2"
                     />
                   </figure>
-                </a>
+                </Link>
 
                 <div className="blog-info">
                   <h3>
-                    <a href="Cultura.html">
+                    <Link to="/Cultura">
                       Taller de Pintura libre
-                    </a>
+                    </Link>
                   </h3>
 
                   <div className="container-button">
-                    <a href="Cultura.html" className="btn-read-more">
+                    <Link to="/Cultura" className="btn-read-more">
                       Leer mas
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               {/* 3 */}
               <div className="container-blog">
-                <a href="Cultura.html" className="container-img">
+                <Link to="/Cultura" className="container-img">
                   <figure>
                     <img
                       src={'/blog-image-3.jpg'}
                       alt="Post 3"
                     />
                   </figure>
-                </a>
+                </Link>
 
                 <div className="blog-info">
                   <h3>
-                    <a href="Cultura.html">
+                    <Link to="/Cultura">
                       Conoce mas sobre nuestro talleres y exposiciones
-                    </a>
+                    </Link>
                   </h3>
 
                   <div className="container-button">
-                    <a href="Cultura.html" className="btn-read-more">
+                    <Link to="/Cultura" className="btn-read-more">
                       Leer mas
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -364,7 +369,7 @@ function Home() {
 
       <Footer />
 
-      
+
 
 
 

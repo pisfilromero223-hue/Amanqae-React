@@ -4,6 +4,7 @@ import '../assets/css/Cultura.css';
 import AgendaCultura from "../components/AgendaCultura";
 import Talleres from "../components/Talleres";
 import Footer from "../components/Footer";
+import Preloader from "../components/Preloader";
 
 
 
@@ -11,6 +12,7 @@ import Footer from "../components/Footer";
 function Cultura() {
   return (
     <>
+      <Preloader />
       <Header />
 
       <section className="acerca-banner">

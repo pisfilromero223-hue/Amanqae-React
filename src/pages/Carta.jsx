@@ -3,12 +3,14 @@ import Header from '../components/Header';
 import '../assets/css/carta.css';
 import BookingForm from '../components/BookingForm';
 import Footer from '../components/Footer';
+import Preloader from "../components/Preloader";
 
 
 function Carta() {
   return (
 
     <>
+      <Preloader />
       < Header />
       <section className="acerca-banner">
         <div className="container">
@@ -79,7 +81,7 @@ function Carta() {
 
                 {/* CARD 3 */}
                 <div className="carta-images-container">
-                  <img src= '/main-dish-2.jpg' alt="Postres" />
+                  <img src='/main-dish-2.jpg' alt="Postres" />
                   <div className="carta-info">
                     <h3>Postres</h3>
                     <a

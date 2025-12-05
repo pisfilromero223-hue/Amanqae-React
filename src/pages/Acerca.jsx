@@ -3,10 +3,12 @@ import '../assets/css/Acerca.css';
 import { Link } from "react-router-dom";
 import Enfoque from "../components/Enfoque";
 import Footer from '../components/Footer';
+import Preloader from '../components/Preloader';
 
 function Acerca() {
     return (
         <>
+            <Preloader />
             <Header />
 
             <section className="acerca-banner">
@@ -78,13 +80,13 @@ function Acerca() {
                         </ul>
 
                         <div className="container-buttons">
-                            <a href="Carta.html" className="btn btn-primary">
+                            <Link to="/Carta" className="btn btn-primary">
                                 Nuestra Carta <i className="fa-solid fa-arrow-right"></i>
-                            </a>
+                            </Link>
 
-                            <a href="Acerca.html" className="btn btn-secundary">
+                            <Link to="#" className="btn btn-secundary">
                                 Conoce más <i className="fa-solid fa-arrow-right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

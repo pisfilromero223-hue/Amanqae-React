@@ -4,6 +4,7 @@ import Acerca from "./pages/Acerca";
 import Cultura from "./pages/Cultura";
 import Carta from "./pages/Carta";
 import Contacto from "./pages/Contacto";
+import AdminMesa from "./admin/AdminMesa";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/cultura" element={<Cultura />} />
         <Route path="/carta" element={<Carta />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/admin/mesas" element={<AdminMesa />}/>
       </Routes>
     </BrowserRouter>
   );
