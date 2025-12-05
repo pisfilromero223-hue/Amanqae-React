@@ -41,6 +41,8 @@ Este proyecto es la migración completa del sitio web de la cafetería **Amanqae
  ┣ App.jsx
  ┗ main.jsx
 ```
+## PAGINA SUBIDA A UN SERVIDOR:
+https://transcendent-frangipane-5d0cb9.netlify.app/
 
 
 ## 🧑‍💻 Autor
