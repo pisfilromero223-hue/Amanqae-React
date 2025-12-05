@@ -5,9 +5,11 @@ import Cultura from "./pages/Cultura";
 import Carta from "./pages/Carta";
 import Contacto from "./pages/Contacto";
 import AdminMesa from "./admin/AdminMesa";
+import Preloader from "./components/Preloader";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
