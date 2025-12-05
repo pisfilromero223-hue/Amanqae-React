@@ -1,0 +1,276 @@
+/* ======================= */
+/*     SECCIÓN TALLERES    */
+/* ======================= */
+
+.section-talleres {
+    padding: 100px 0;
+}
+
+.section-talleres .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.section-talleres .section-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-talleres .section-wraper h2.title {
+    text-align: center;
+    width: 70%;
+    font-size: 42px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: lightgray;
+}
+
+.section-talleres .section-wraper hr {
+    border: 1px solid #e8f1f0;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.section-talleres .section-wraper p {
+    color: white;
+    font-size: 18px;
+}
+
+/* === Tarjetas === */
+
+.contenedor-carta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.carta-images-container {
+    width: 360px;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.carta-images-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carta-images-container:hover img {
+    transform: scale(1.12);
+}
+
+.carta-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(188, 51, 40, 0.78);
+    border: 4px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.carta-info h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.carta-info .btn-primary {
+    background: white;
+    color: var(--texto-rojito);
+    padding: 14px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    transition: 0.28s;
+}
+
+.carta-info .btn-primary:hover {
+    transform: translateY(-4px) scale(1.04);
+}
+
+.carta-images-container:hover .carta-info {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ======================= */
+/*         MODAL           */
+/* ======================= */
+
+/* ANTES: display:none; */
+/* AHORA: SIEMPRE visible pero con opacity controlado */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    /* impepinable */
+    overflow: hidden;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+.modal.fadeIn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: #fff;
+    width: 85%;
+    max-width: 950px;
+    height: 520px;
+    border-radius: 22px;
+    display: flex;
+    overflow: auto;
+    position: relative;
+    animation: modalFade .45s ease;
+    padding: 10px; /* si necesitas */
+}
+
+
+@keyframes modalFade {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal-left {
+    width: 50%;
+}
+
+.modal-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-right {
+    width: 50%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.modal-right h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #222;
+}
+
+.modal-right p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.btn-inscribite {
+    background: #b62a1f;
+    color: white;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: .28s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* === Animaciones === */
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOutModal {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.90); }
+}
+
+/* ======================= */
+/*   RESPONSIVE            */
+/* ======================= */
+
+@media (max-width: 900px) {
+    .modal-content {
+        max-width: 680px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .modal-left, .modal-right {
+        width: 100%;
+    }
+
+    .modal-left img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        border-radius: 16px;
+    }
+
+    .modal-left img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 420px) {
+    .modal-left img {
+        height: 180px;
+    }
+}
